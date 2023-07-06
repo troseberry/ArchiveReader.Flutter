@@ -43,9 +43,15 @@ class NavigationPageState extends State<NavigationPage> {
 		return Scaffold(
             appBar: AppBar(
                 title: SizedBox(
-                  child:
-                    Text(_selectedPage.toString()),
-                  ),
+                    child:
+                    Row(
+                        children: [
+                            Text(_selectedPage.toString()),
+                            Spacer(),
+                            Icon(Icons.more_vert_rounded)
+                        ],
+                    )
+                ),
             ),
             body: Center(
                 child: _pages.elementAt(_selectedIndex),

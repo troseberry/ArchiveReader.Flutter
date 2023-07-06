@@ -2,7 +2,7 @@
 // Flutter and Dart
 import 'package:flutter/material.dart';
 import 'navigation_page.dart';
- 
+import 'package:archive_reader/Styles/custom_styles.dart';
 
 class ArchiveReaderApp extends StatelessWidget {
   const ArchiveReaderApp({Key? key}) : super(key: key);
@@ -13,16 +13,16 @@ class ArchiveReaderApp extends StatelessWidget {
     return MaterialApp(
       title: 'Archive Reader',
       theme: ThemeData(
-        primaryColor: Color(0xFF860000),
+        primaryColor: CustomStyles.primaryAccent,
         appBarTheme: AppBarTheme(
-            color: Color(0xFF860000),
+            color: CustomStyles.primaryAccent,
         ),
         //primarySwatch: MaterialColor(0xFF860000, ),
         bottomNavigationBarTheme: BottomNavigationBarThemeData(
           showUnselectedLabels: true,
-          backgroundColor: Color(0xFFFFFFFF),
-          selectedItemColor: Color(0xFF860000),
-          unselectedItemColor: Color(0xFFE0E0E0),
+          backgroundColor: CustomStyles.defaultBackground,
+          selectedItemColor: CustomStyles.primaryAccent,
+          unselectedItemColor: CustomStyles.defaultForeground,
         ),
       ),
       home: const NavigationPage(),
