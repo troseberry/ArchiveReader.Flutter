@@ -1,3 +1,5 @@
+import 'package:archive_reader/Widgets/padded_header.dart';
+import 'package:archive_reader/Styles/custom_styles.dart';
 import 'package:flutter/material.dart';
 
 class ExplorePage extends StatelessWidget {
@@ -9,9 +11,17 @@ class ExplorePage extends StatelessWidget {
         return SizedBox(
             width: double.infinity,
             child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
                 children: const<Widget>[
-                    Text('Explore'),
+                    Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                            PaddedHeader(title: 'Find Your Favorites', allPadding: 20.0,),
+                        ],
+                    ),
+                    Divider(
+                      color: CustomStyles.primaryFont,
+                      thickness: 2,
+                    )
                 ],
             ),
         );

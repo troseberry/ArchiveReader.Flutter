@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
-import 'package:archive_reader/Styles/custom_styles.dart';
-import 'package:archive_reader/Widgets/custom_widgets.dart';
+//import '../Styles/custom_styles.dart';
+import '../Widgets/padded_header.dart';
+import '../Widgets/padded_divider.dart';
 
 class HomePage extends StatelessWidget {
     const HomePage({Key? key, required this.title}) : super(key: key);
@@ -14,19 +15,11 @@ class HomePage extends StatelessWidget {
             child: Column(
                 children: const<Widget>[
                     PaddedHeader(title: 'Resume Reading', 
-                        leftPadding: 20.0,
-                        rightPadding: 20.0,
-                        topPadding: 20.0,),
-                    Padding(
-                      padding: EdgeInsets.all(20.0),
-                      child: Divider(
-                        color: CustomStyles.primaryFont,
-                        thickness: 2,
-                      ),
-                    ),
+                        allPadding: 20.0,),
+                    PaddedDivider(),
                     Row(
                       children: [
-                        PaddedHeader(title: 'Recent Updates', leftRightPadding: 20.0),
+                        PaddedHeader(title: 'Recent Updates', allPadding: 20.0),
                         Spacer(),
                         Padding(
                           padding: EdgeInsets.only(right: 10.0),
@@ -44,4 +37,6 @@ class HomePage extends StatelessWidget {
         return 'Home';
     }
 }
+
+
 
