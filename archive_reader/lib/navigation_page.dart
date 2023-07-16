@@ -29,7 +29,7 @@ class NavigationPageState extends State<NavigationPage> {
         super.initState();
 
         _selectedPage = _pages.elementAt(_selectedIndex);
-  }
+    }
 
     void onItemTapped(int index) {
         setState(() {

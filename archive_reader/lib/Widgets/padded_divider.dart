@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import '../Styles/custom_styles.dart';
 
+// ignore: must_be_immutable
 class PaddedDivider extends StatelessWidget {
   const PaddedDivider({
         super.key, 
@@ -12,6 +13,8 @@ class PaddedDivider extends StatelessWidget {
         this.leftRightPadding = 0.0,
         this.topBottomPadding = 0.0,
         this.allPadding = 0.0,
+        this.color = CustomStyles.primaryFont,
+        this.thickness = 2
     });
 
     final double leftPadding;
@@ -21,6 +24,8 @@ class PaddedDivider extends StatelessWidget {
     final double leftRightPadding;
     final double topBottomPadding;
     final double allPadding;
+    final Color color;
+    final double thickness;
 
 	EdgeInsetsGeometry createPadding() {
         if (allPadding != 0.0) {
@@ -45,10 +50,10 @@ class PaddedDivider extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left:20.0, right: 20.0),
+      padding: createPadding(),
       child: Divider(
-        color: CustomStyles.primaryFont,
-        thickness: 2,
+        color: color,
+        thickness: thickness,
       ),
     );
   }
